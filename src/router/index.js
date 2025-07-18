@@ -14,7 +14,7 @@ import Mappe from '../views/Mappe.vue'
 import Eventi from '../views/Eventi.vue'
 import InfoEventi from '../views/InfoEventi.vue'
 import SelectMap from '../views/SelectMap.vue'
-import InteractiveMap from '../views/InteractiveMap.vue'
+import InteractiveMap from '../views/interactiveMap.vue'
 
 
 const routes = [
