@@ -9,7 +9,7 @@
     >
       <div class="card-image-container" @click="goInfoEventi(evento)">
         <img
-          :src="`http://195.231.23.205:8082/assets/${evento.cover}`"
+          :src="`http://directusgal.vidimus.it/assets/${evento.cover}`"
           alt="Immagine evento"
           class="card-image"
         />
@@ -32,7 +32,7 @@ const route = useRoute();
 
 const eventi = ref(null)
 async function getEventi() {
-  const url = 'http://195.231.23.205:8082/items/eventi'
+  const url = 'http://directusgal.vidimus.it/items/eventi'
   try {
     const res = await fetch(url)
     const json = await res.json()

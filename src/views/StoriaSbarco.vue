@@ -2,7 +2,7 @@
   <div class="poi-container" v-if="poi">
     <div class="poi-cover">
       <img
-        :src="'http://195.231.23.205:8082/assets/' + poi.cover"
+        :src="'http://directusgal.vidimus.it/assets/' + poi.cover"
         :alt="poi.titolo"
       />
     </div>
@@ -28,7 +28,7 @@ let mapInitialized = false;
 
 async function fetchPOI() {
   try {
-    const res = await fetch("http://195.231.23.205:8082/items/POI?id=1")
+    const res = await fetch("http://directusgal.vidimus.it/items/POI?id=1")
     const json = await res.json();
     poi.value = json.data[0];
 

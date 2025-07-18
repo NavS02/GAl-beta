@@ -23,7 +23,7 @@
           :style="getCardStyle(index)"
         >
           <video
-            :src="'http://195.231.23.205:8082/assets/' + video.id"
+            :src="'http://directusgal.vidimus.it/assets/' + video.id"
             autoplay
             muted
             loop
@@ -49,7 +49,7 @@
     <!-- Fullscreen Modal Video -->
     <div v-if="fullVideo" class="fullscreen" @click.self="closeFullVideo">
       <video
-        :src="'http://195.231.23.205:8082/assets/' + fullVideo.id"
+        :src="'http://directusgal.vidimus.it/assets/' + fullVideo.id"
         controls
         autoplay
         class="fullscreen-player"
@@ -75,7 +75,7 @@ let startX = 0;
 async function fetchVideos() {
   try {
     const res = await fetch(
-      `http://195.231.23.205:8082/files?filter[folder][_eq]=${folderId}&fields=*.*.*`
+      `http://directusgal.vidimus.it/files?filter[folder][_eq]=${folderId}&fields=*.*.*`
     );
     const json = await res.json();
     videos.value = json.data;

@@ -23,7 +23,7 @@
           v-for="logo in crediti.gallery"
           :key="logo.id"
           :src="
-            'http://195.231.23.205:8082/assets/' + logo.directus_files_id?.id
+            'http://directusgal.vidimus.it/assets/' + logo.directus_files_id?.id
           "
           :alt="logo.title || 'Logo'"
           class="logo-img"
@@ -96,7 +96,7 @@ const crediti = ref();
 onMounted(async () => {
   try {
     const res = await fetch(
-      "http://195.231.23.205:8082/items/APP/1?fields=*.*.*"
+      "http://directusgal.vidimus.it/items/APP/1?fields=*.*.*"
     );
     const json = await res.json();
     crediti.value = json.data;

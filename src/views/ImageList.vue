@@ -23,7 +23,7 @@
           :style="getCardStyle(index)"
         >
           <img
-            :src="'http://195.231.23.205:8082/assets/' + img.id"
+            :src="'http://directusgal.vidimus.it/assets/' + img.id"
             :alt="img.title"
             draggable="false"
             @dragstart.prevent
@@ -45,7 +45,7 @@
     <!-- Modal immagine ingrandita -->
     <div v-if="fullImage" class="fullscreen" @click="closeFullImage">
       <img
-        :src="'http://195.231.23.205:8082/assets/' + fullImage.id"
+        :src="'http://directusgal.vidimus.it/assets/' + fullImage.id"
         :alt="fullImage.title"
       />
       <p class="fullscreen-title">{{ fullImage.title }}</p>
@@ -72,7 +72,7 @@ let startX = 0;
 async function fetchImages() {
   try {
     const res = await fetch(
-      `http://195.231.23.205:8082/files?filter[folder][_eq]=${folderId}&fields=*.*.*`
+      `http://directusgal.vidimus.it/files?filter[folder][_eq]=${folderId}&fields=*.*.*`
     );
     const json = await res.json();
     images.value = json.data;

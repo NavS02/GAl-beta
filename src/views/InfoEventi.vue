@@ -2,7 +2,7 @@
   <div class="evento-container" v-if="evento">
     <div class="evento-cover">
       <img
-        :src="'http://195.231.23.205:8082/assets/' + evento.cover.id"
+        :src="'http://directusgal.vidimus.it/assets/' + evento.cover.id"
         :alt="evento.titolo"
       />
     </div>
@@ -60,13 +60,13 @@ let startX = 0;
 async function fetchEvento() {
   const id = route.params.id;
   try {
-    const res = await fetch(`http://195.231.23.205:8082/items/eventi/${id}?fields=*.*.*`);
+    const res = await fetch(`http://directusgal.vidimus.it/items/eventi/${id}?fields=*.*.*`);
     const json = await res.json();
     evento.value = json.data;
 
     if (evento.value.gallery && evento.value.gallery.length > 0) {
       console.log(evento.value)
-      let imagesArray= evento.value.gallery.map(g => 'http://195.231.23.205:8082/assets/'+g.directus_files_id.id);
+      let imagesArray= evento.value.gallery.map(g => 'http://directusgal.vidimus.it/assets/'+g.directus_files_id.id);
     images.value = imagesArray;
 
       console.log(imagesArray)
@@ -81,7 +81,7 @@ async function fetchEvento() {
 //   try {
 //     const idList = galleryIds
 //     const res = await fetch(
-//       `http://195.231.23.205:8082/assets?filter[id][_in]=${idList}`
+//       `http://directusgal.vidimus.it/assets?filter[id][_in]=${idList}`
 //     );
 //     const json = await res.json();
 //     images.value = json.data;

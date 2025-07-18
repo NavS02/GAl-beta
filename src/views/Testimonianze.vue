@@ -26,7 +26,7 @@ import { ref, onMounted } from 'vue'
 const videoUrl = ref(null)
 
 onMounted(() => {
-  videoUrl.value = 'http://195.231.23.205:8082/assets/85755332-7004-4c23-964b-ba8597498915'
+  videoUrl.value = 'http://directusgal.vidimus.it/assets/85755332-7004-4c23-964b-ba8597498915'
 })
 </script>
 

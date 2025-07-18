@@ -40,7 +40,7 @@
         :key="index"
         class="grid-item"
         :style="{
-          backgroundImage: `url(http://195.231.23.205:8082/assets/${map.id})`,
+          backgroundImage: `url(http://directusgal.vidimus.it/assets/${map.id})`,
         }"
         @click="(e) => handleMapClick(e, map)"
       >
@@ -76,7 +76,7 @@ const route = useRoute();
 async function getMapImages() {
   try {
     const response = await fetch(
-      "http://195.231.23.205:8082/files?filter[_and][0][folder][_eq]=dc17849a-2f6a-436b-ae2d-164b36f0141b&filter[_and][1][type][_eq]=image/png"
+      "http://directusgal.vidimus.it/files?filter[_and][0][folder][_eq]=dc17849a-2f6a-436b-ae2d-164b36f0141b&filter[_and][1][type][_eq]=image/png"
     );
     const data = await response.json();
     mapsData.value = data.data.map((item) => ({
@@ -101,7 +101,7 @@ function handleMapClick(event, map) {
 
   const baseStyle = {
     position: "fixed",
-    backgroundImage: `url(http://195.231.23.205:8082/assets/${map.id})`,
+    backgroundImage: `url(http://directusgal.vidimus.it/assets/${map.id})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",

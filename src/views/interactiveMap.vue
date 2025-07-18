@@ -107,12 +107,12 @@ let overlay;
 async function getMapImages() {
   try {
     const response = await fetch(
-      "http://195.231.23.205:8082/files?filter[_and][0][id][_eq]=" + route.params.id
+      "http://directusgal.vidimus.it/files?filter[_and][0][id][_eq]=" + route.params.id
     );
     const data = await response.json();
     const item = data.data[0];
 
-    myImage.value = "http://195.231.23.205:8082/assets/" + item.id;
+    myImage.value = "http://directusgal.vidimus.it/assets/" + item.id;
     townData.value = item;
 
     if (towns[route.params.id]) {

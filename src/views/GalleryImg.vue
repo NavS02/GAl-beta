@@ -22,7 +22,7 @@ const folders = ref(null);
 
 
 async function getData() {
-  const url = "http://195.231.23.205:8082/folders?filter[parent][_eq]=f287b23d-6ddf-4e52-914f-4195f330523f&sort=name&fields=id,name";
+  const url = "http://directusgal.vidimus.it/folders?filter[parent][_eq]=f287b23d-6ddf-4e52-914f-4195f330523f&sort=name&fields=id,name";
   try {
     const res = await fetch(url);
     const json = await res.json();
